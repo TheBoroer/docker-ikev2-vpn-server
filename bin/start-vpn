@@ -39,7 +39,7 @@ ip6tables -t nat -A POSTROUTING -s fd6a:6ce3:c8d8:7caa::/64 -o eth0 -j MASQUERAD
 # Simple EAP user/pass auth only 
 if [ ! -z "$EAP_USERNAME" ] && [ ! -z "$EAP_PASSWORD" ]; then
   rm /etc/ipsec.secrets
-  echo "${EAP_USERNAME} : EAP \"${EAP_PASSWORD`}\"" > /etc/ipsec.secrets
+  echo "${EAP_USERNAME} : EAP \"${EAP_PASSWORD}\"" > /etc/ipsec.secrets
 fi
 
 
